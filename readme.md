@@ -12,11 +12,16 @@ Looks like lots of work to be done .....
 
 `composer require abdelrahmanrafaat`/`repositories-maker:dev-master`
 
-2.Go to **config/app.php** and add this line to the end of the providers array.
+
+
+2.you need to register the package service provider .. Go to **config/app.php** and add this line to the end of the providers array.
 `Abdelrahmanrafaat\RepositoriesMaker\Provider\RepositoriesMakerServiceProvider::class`
 
 
+
 3.This command should add a new command to your artisan list .. make:repositories
+
+
 
 4.This Command Assumes that your models are at at **app** directory and extends **Model** class , but of course you can change this options as i will explain later.
 
@@ -38,7 +43,17 @@ Note :
 - except and only options don\`t work togther you need to specifiy one of them.
 - except and only model names are (**class base name** not the full name space)
 
-5-If you run the command it will generate the repositories and interfaces in **app\Repositories** and RepositoriesServiceProvider in the **app\Provider** and the terminal will output the generated files.
+5.If you run the command it will generate the repositories and interfaces in **app\Repositories** and RepositoriesServiceProvider in the **app\Provider** and the terminal will output the names of generated files.
+
+6-you need to register the RepositoriesServiceProvider .. Go to **config/app.php** and add this line to the end of the providers array(make sure you change **App** if you have different namespace for your application).
+
+`App\Providers\RepositoriesServiceProvider::class`
+
+........
+
+Now you are good to go , you can go to any class that has automatic resolution (controller , event , command ..) and type-hint the repository interface , and you will get a repository that has an instance of it\`s model.
+
+Happy coding ..
 
 
 
