@@ -1,3 +1,7 @@
+##**Repositories Maker**##
+ 
+
+
 Repository pattern is an abstraction layer for your models.
 
 Instead of writing tones of duplicated queries in your controllers.
@@ -54,9 +58,3 @@ Note :
 Now you are good to go , you can go to any class that has automatic resolution (controller , event , command ..) and type-hint the repository interface , and you will get a repository that has an instance of it\`s model.
 
 Happy coding ..
-
-
-
-
-
-
