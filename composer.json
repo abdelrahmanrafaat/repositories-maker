@@ -1,0 +1,24 @@
+{
+    "name": "abdelrahmanrafaat/repositories-maker",
+    "description": "creates repositories for Laravel models.",
+    "license": "MIT",
+    "keywords" : ["laravel" , "repositories" , "models"],
+    "authors": [
+        {
+            "name": "AbdelrahmanRafaat",
+            "email": "abdel.rahmanrafaat5@gmail.com"
+        }
+    ],
+    "version": "1.0.0",
+    "prefer-stable": true,
+    "require": {
+        "illuminate/support": "~5",
+        "illuminate/filesystem": "~5",
+        "illuminate/console": "~5"
+    },
+    "autoload" : {
+        "psr-4":{
+            "Abdelrahmanrafaat\\RepositoriesMaker\\" : "src/"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<?php
+
+namespace AppNamespaceRepositories;
+
+RepositoryUses
+
+class RepsitoryName implements RepositoryInterfaceName{
+	protected $ModelInstance;
+
+	public function __construct(){
+		$this->ModelInstance = new ModelName;
+	}
+
+}

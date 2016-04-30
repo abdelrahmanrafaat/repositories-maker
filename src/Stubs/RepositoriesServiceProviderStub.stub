@@ -1,0 +1,30 @@
+<?php
+
+namespace AppNamespaceProviders;
+
+use Illuminate\Support\ServiceProvider;
+RepositoriesServiceProviderUses
+
+class RepositoriesServiceProvider extends ServiceProvider
+{
+    /**
+     * Bootstrap the application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        //
+    }
+
+    /**
+     * Repositories Bindings.
+     * Bind Every Repository to interface.
+     * @return void
+     */
+    public function register()
+    {
+        RepositoriesBindings
+        
+    }
+}
