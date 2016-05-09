@@ -15,7 +15,7 @@ class RepositoryInterfaceCreator extends AbstractStubCreator{
 	 */
 	public function createFromStub($model){
 		$this->fileSystem->put(
-			app_path().'\/Repositories\/'.$this->getRepositoryName($model).'.php',
+			app_path().'/Repositories/Interfaces/'.$this->getRepositoryInterfaceName($model).'.php',
 			$this->populateStub($model)
 		);
 	}
